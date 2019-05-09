@@ -89,8 +89,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6lH-ej-n5H">
-                                <rect key="frame" x="16" y="298" width="343" height="120.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eZ-7m-EBz">
+                                <rect key="frame" x="16" y="84" width="343" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6lH-ej-n5H">
+                                <rect key="frame" x="16" y="273.5" width="343" height="120.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IDc-rq-xLh">
                                         <rect key="frame" x="-2" y="0.0" width="347" height="31"/>
@@ -204,12 +210,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eZ-7m-EBz">
-                                <rect key="frame" x="16" y="84" width="343" height="38.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SpL-kq-pi2">
                                 <rect key="frame" x="32" y="645" width="311" height="2"/>
                             </progressView>
@@ -219,6 +219,7 @@
                             <constraint firstItem="lm8-Sd-yyB" firstAttribute="centerY" secondItem="a1E-h3-xfg" secondAttribute="centerY" id="0eV-xN-orN"/>
                             <constraint firstItem="SpL-kq-pi2" firstAttribute="leading" secondItem="a1E-h3-xfg" secondAttribute="leadingMargin" constant="16" id="1O6-M5-cgu"/>
                             <constraint firstItem="44C-Gd-Pga" firstAttribute="centerY" secondItem="a1E-h3-xfg" secondAttribute="centerY" id="3Og-Xo-6zE"/>
+                            <constraint firstItem="6lH-ej-n5H" firstAttribute="centerY" secondItem="a1E-h3-xfg" secondAttribute="centerY" id="Igw-7V-Toe"/>
                             <constraint firstItem="6lH-ej-n5H" firstAttribute="leading" secondItem="2FS-zw-QBD" secondAttribute="leading" constant="16" id="ZIZ-0E-reX"/>
                             <constraint firstItem="2FS-zw-QBD" firstAttribute="trailing" secondItem="lm8-Sd-yyB" secondAttribute="trailing" constant="16" id="h6V-B7-n6t"/>
                             <constraint firstItem="0eZ-7m-EBz" firstAttribute="top" secondItem="2FS-zw-QBD" secondAttribute="top" constant="20" id="hDV-vu-hUo"/>
@@ -234,8 +235,20 @@
                     </view>
                     <navigationItem key="navigationItem" id="DgJ-OM-Ffl"/>
                     <connections>
+                        <outlet property="multiLabel1" destination="AUl-pC-HUa" id="aJC-kx-cIl"/>
+                        <outlet property="multiLabel2" destination="hlC-Wp-uKy" id="eme-C8-xMV"/>
+                        <outlet property="multiLabel3" destination="Cpd-00-s9i" id="N6N-2s-Kmu"/>
+                        <outlet property="multiLabel4" destination="LTC-3b-GVo" id="6gC-2q-iDC"/>
                         <outlet property="multipleStackView" destination="lm8-Sd-yyB" id="faN-I1-nko"/>
+                        <outlet property="questionLabel" destination="0eZ-7m-EBz" id="bxc-cP-TA5"/>
+                        <outlet property="questionProgressView" destination="SpL-kq-pi2" id="Mys-t2-i66"/>
+                        <outlet property="rangedLabel1" destination="Cbs-a3-ddO" id="2BV-kD-gF0"/>
+                        <outlet property="rangedLabel2" destination="0ct-U5-3K7" id="G1Z-wz-qfG"/>
                         <outlet property="rangedStackView" destination="6lH-ej-n5H" id="AK2-fZ-4CZ"/>
+                        <outlet property="singleButton1" destination="D8t-gm-tEn" id="R4f-6a-ACx"/>
+                        <outlet property="singleButton2" destination="BPb-6b-648" id="z5D-UJ-Cee"/>
+                        <outlet property="singleButton3" destination="YLv-Dd-OXd" id="sQe-m0-co7"/>
+                        <outlet property="singleButton4" destination="qVs-RR-1Fe" id="dKb-N4-g1p"/>
                         <outlet property="singleStackView" destination="44C-Gd-Pga" id="KB1-Nu-1nk"/>
                         <segue destination="PZm-QC-8q3" kind="show" identifier="ResultsSegue" id="ejM-Eu-SFf"/>
                     </connections>
