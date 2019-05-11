@@ -9,6 +9,8 @@
 import UIKit
 
 class ResultsViewController: UIViewController {
+    @IBOutlet weak var resultAnswerLabel: UILabel!
+    @IBOutlet weak var resultDefinitionLabel: UILabel!
     
     var responses: [Answer]!
 
@@ -28,7 +30,10 @@ class ResultsViewController: UIViewController {
             return pair1.value > pair2.value
         })
         
-        let mostCommonAnswers = frequentAnswersSorted.first!.key
+        let mostCommonAnswer = frequentAnswersSorted.first!.key
+        
+        resultAnswerLabel.text = "You are a \(mostCommonAnswer.rawValue)!"
+        resultDefinitionLabel.text = mostCommonAnswer.definition
     }
     
 
